@@ -1,0 +1,125 @@
+body {
+  background-color: #7681d4;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: rgba(136, 39, 95, 0.279);
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #bbbbbb;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+.book {
+  background: rgba(120, 104, 175, 0.85);
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.book:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.book img {
+  width: 150px;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+}
+
+.book h2 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.book h2 a:hover {
+  text-decoration: underline;
+  color: #bbbbbb;
+}
+
+p {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(51, 51, 51, 0.9);
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  background: linear-gradient(135deg, #333333, #555555);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #555555, #777777);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+}
+
+form {
+  margin-top: 10px;
+}
+
+input {
+  width: 100px;
+  padding: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  border-color: #bbbbbb;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .book {
+    width: 90%;
+  }
+}

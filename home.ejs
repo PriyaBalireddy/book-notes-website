@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/home.css">
+  <title>Book Tracker</title>
+</head>
+<body>
+  <nav>
+    <h1>My Local Book Notes</h1>
+    <a href="/">Home</a>
+    <% if (user) { %>
+      <a href="/compose">Add Book</a>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% } %>
+  </nav>
+
+  <% books.forEach((book) => { %>
+    <div class="book">
+      <img src="<%= book.coverUrl %>" alt="Book Cover">
+      <h2><a href="/book/<%= book._id %>"><%= book.title %></a></h2>
+      <p><strong>Author:</strong> <%= book.author %></p>
+
+      <p><strong>Average Rating:</strong> &#11088 <%= book.avgRating %></p>
+
+      <h4>User Ratings:</h4>
+      <ul>
+        <% book.ratings.forEach(rating => { %>
+          <li><%= rating.user %>: &#11088 <%= rating.rating %></li>
+        <% }); %>
+      </ul>
+
+      <% if (user) { %>
+        <form action="/rate/<%= book._id %>" method="POST">
+          <label for="rating">Your Rating (1-5):</label>
+          <input type="number" name="rating" min="1" max="5" required>
+          <button type="submit">Rate</button>
+        </form>
+      <% } %>
+
+      <% if (user === book.user) { %>
+        <a href="/edit/<%= book._id %>">Edit</a>
+        <form action="/delete/<%= book._id %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+      <% } %>
+    </div>
+  <% }) %>
+
+</body>
+</html>

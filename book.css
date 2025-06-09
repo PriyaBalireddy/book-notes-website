@@ -1,0 +1,80 @@
+body {
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 32px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+h3 {
+    color: #dddddd;
+}
+
+.book-details img {
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.book-details img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+button {
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #555, #777);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+}
+
+a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #dddddd;
+}
+
+form {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}

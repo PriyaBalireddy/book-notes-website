@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Book Tracker</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>&#128221 Create an Account</h2>
+
+        <form action="/signup" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required autocomplete="off">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required autocomplete="off">
+
+            <button type="submit">Signup</button>
+        </form>
+
+        <p>Already have an account? <a href="/login">Login here</a></p>
+        <a href="/">&#x2B05 Back to Home</a>
+    </div>
+
+</body>
+</html>
